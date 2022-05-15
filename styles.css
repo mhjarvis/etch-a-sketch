@@ -56,8 +56,8 @@ table {
 /************ Grid-Boxes ************/
 .container {  
 	background-color: green;
-	width: 960px;
-	height: 960px;
+	width: 800px;
+	height: 800px;
 	display: flex;
 }
 
