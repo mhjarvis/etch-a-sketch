@@ -7,16 +7,17 @@ containerDiv.setAttribute('class', 'container');
 
 const container = document.querySelector('.container');
 
-let boardSize = 16;
+let boardSize = 30;
 
 // Loop through and create board
 for(let i = 0; i < boardSize; i++) {
 
     const div = document.createElement('div');
     div.setAttribute('id', 'box-container' + i);
+    div.setAttribute('class', 'box-column');
     container.appendChild(div);
 
-    for(let j = 0; j < 16; j++) {
+    for(let j = 0; j < boardSize; j++) {
 
         const boxContainer = document.querySelector('#box-container' + i);
         const div = document.createElement('div');

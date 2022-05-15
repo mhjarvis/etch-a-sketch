@@ -47,15 +47,31 @@ table {
 	border-spacing: 0;
 }
 
-.container {
-    width: 600px;
-    height: 600px;
+.container {  
+	background-color: green;
+	width: 960px;
+	height: 960px;
+	display: flex;
+	
 }
 
+.box-column {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 0;
+}
+
+
 .box {
-    background-color: blue;
-    height: 2em;
-    width: 2em;
-    display: inline-flex;
-    margin: 0 1px;
+    background-color: rgb(65, 65, 70);
+	border: 1px solid white;  
+	height: 100%;
+	min-height: 0;
+
+	
+}
+
+.box:hover {
+	background-color: black;
 }
