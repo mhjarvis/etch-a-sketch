@@ -1,9 +1,14 @@
 // Create container div
-const body = document.querySelector('body');
-const containerDiv = document.createElement('div');
+const body = document.querySelector('body');            //select body tag
+const wrapperDiv = document.createElement('div');       //create wrapper div
+const containerDiv = document.createElement('div');     //create container div
 
-body.appendChild(containerDiv);
-containerDiv.setAttribute('class', 'container');
+body.appendChild(wrapperDiv);                           //add wrapper to DOM
+wrapperDiv.setAttribute('class', 'wrapper');            //add class to wrapper
+
+const wrapper = document.querySelector(".wrapper");     //select wrapper class tag
+wrapper.appendChild(containerDiv);                      //add container to DOM
+containerDiv.setAttribute('class', 'container');        //add container class
 
 const container = document.querySelector('.container');
 
