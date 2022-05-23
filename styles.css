@@ -53,6 +53,16 @@ table {
 	justify-content: center;
 }
 
+/************ Title **************/
+
+.title {
+	font-size: 5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2rem 0;
+}
+
 /************ Grid-Boxes ************/
 .container {  
 	background-color: green;

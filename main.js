@@ -2,9 +2,17 @@
 const body = document.querySelector('body');            //select body tag
 const wrapperDiv = document.createElement('div');       //create wrapper div
 const containerDiv = document.createElement('div');     //create container div
+const btn = document.createElement('button');
+const h1 = document.createElement('h1');
+
+body.appendChild(h1);
+h1.setAttribute('class', 'title');
+h1.innerHTML = "Etch-A-Sketch";
 
 body.appendChild(wrapperDiv);                           //add wrapper to DOM
 wrapperDiv.setAttribute('class', 'wrapper');            //add class to wrapper
+
+
 
 const wrapper = document.querySelector(".wrapper");     //select wrapper class tag
 wrapper.appendChild(containerDiv);                      //add container to DOM
@@ -33,11 +41,10 @@ for(let i = 0; i < boardSize; i++) {
 
 colorChange();
 
-
+// Function to add event listener upon 'mouseover' to update color
 function colorChange() {
     
     let divMatches = document.getElementsByClassName('box');
-    //console.log(divMatches);
 
     for(let i = 0; i < divMatches.length; i++) {
         divMatches.item(i).addEventListener("mouseover", () => {
