@@ -5,9 +5,15 @@ const containerDiv = document.createElement('div');     //create container div
 const btn = document.createElement('button');
 const h1 = document.createElement('h1');
 
+// Add title element to document
 body.appendChild(h1);
 h1.setAttribute('class', 'title');
 h1.innerHTML = "Etch-A-Sketch";
+
+// Add button element to document
+wrapperDiv.appendChild(btn);
+btn.setAttribute('class', 'btn');
+btn.innerHTML = "Update";
 
 body.appendChild(wrapperDiv);                           //add wrapper to DOM
 wrapperDiv.setAttribute('class', 'wrapper');            //add class to wrapper
