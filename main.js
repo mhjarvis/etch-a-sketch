@@ -30,3 +30,18 @@ for(let i = 0; i < boardSize; i++) {
         boxContainer.appendChild(div);
     }
 }
+
+colorChange();
+
+
+function colorChange() {
+    
+    let divMatches = document.getElementsByClassName('box');
+    //console.log(divMatches);
+
+    for(let i = 0; i < divMatches.length; i++) {
+        divMatches.item(i).addEventListener("mouseover", () => {
+            divMatches.item(i).classList.add('changeToGray');
+        });
+    }
+}
