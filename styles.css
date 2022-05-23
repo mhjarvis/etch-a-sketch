@@ -75,6 +75,10 @@ table {
 	min-height: 0;
 }
 
-.box:hover {
+.changeToGray {
 	background-color: black;
 }
+
+/* .box:hover {
+	background-color: black;
+} */
