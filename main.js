@@ -10,15 +10,8 @@ body.appendChild(h1);
 h1.setAttribute('class', 'title');
 h1.innerHTML = "Etch-A-Sketch";
 
-// Add button element to document
-wrapperDiv.appendChild(btn);
-btn.setAttribute('class', 'btn');
-btn.innerHTML = "Update";
-
 body.appendChild(wrapperDiv);                           //add wrapper to DOM
 wrapperDiv.setAttribute('class', 'wrapper');            //add class to wrapper
-
-
 
 const wrapper = document.querySelector(".wrapper");     //select wrapper class tag
 wrapper.appendChild(containerDiv);                      //add container to DOM
@@ -45,6 +38,9 @@ for(let i = 0; i < boardSize; i++) {
     }
 }
 
+form();
+
+
 colorChange();
 
 // Function to add event listener upon 'mouseover' to update color
@@ -57,4 +53,30 @@ function colorChange() {
             divMatches.item(i).classList.add('changeToGray');
         });
     }
+}
+
+
+function form() {
+    const div = document.createElement('div');
+    const form = document.createElement('form');
+    const input = document.createElement('input');
+
+    wrapperDiv.appendChild(div);
+    div.setAttribute('class', 'form-container');
+
+    const formContainer = document.querySelector('.form-container');
+    formContainer.appendChild(form);
+    form.setAttribute('class', 'main-form');
+
+    //const mainForm = document.querySelector('.main-form');
+    formContainer.appendChild(input);
+    input.setAttribute('class', 'form-imput');
+    input.setAttribute('type', 'text');
+    input.setAttribute('placeholder', '16');
+    input.setAttribute('name', 'gridSquare');
+
+    // Add button element to document
+    formContainer.appendChild(btn);
+    btn.setAttribute('class', 'btn');
+    btn.innerHTML = "Update";
 }
