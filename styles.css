@@ -61,7 +61,7 @@ body {
 /************ Title **************/
 
 .title {
-	font-size: 5e
+	font-size: 5em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
