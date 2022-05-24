@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+body {
+	background-color: rgb(74, 96, 130);
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -82,7 +86,6 @@ input[type="text"] {
 
 /************ Grid-Boxes ************/
 .container {  
-	background-color: green;
 	width: 800px;
 	height: 800px;
 	display: flex;
@@ -96,14 +99,15 @@ input[type="text"] {
 }
 
 .box {
-    background-color: rgb(65, 65, 70);
-	border: 1px solid white;  
+    background-color: white;
+	border: 1px dotted 	rgb(74, 96, 130);
+	;  
 	height: 100%;
 	min-height: 0;
 }
 
 .changeToGray {
-	background-color: black;
+	background-color: gray;
 }
 
 /* .box:hover {

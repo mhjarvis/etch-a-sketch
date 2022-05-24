@@ -22,26 +22,29 @@ const container = document.querySelector('.container');
 let boardSize = 30;
 
 // Loop through and create board
-for(let i = 0; i < boardSize; i++) {
 
-    const div = document.createElement('div');
-    div.setAttribute('id', 'box-container' + i);
-    div.setAttribute('class', 'box-column');
-    container.appendChild(div);
+createBoard();
+form();
+colorChange();
 
-    for(let j = 0; j < boardSize; j++) {
+// Function to create board with grid squares
+function createBoard() {
+    for(let i = 0; i < boardSize; i++) {
 
-        const boxContainer = document.querySelector('#box-container' + i);
         const div = document.createElement('div');
-        div.setAttribute('class', 'box');
-        boxContainer.appendChild(div);
+        div.setAttribute('id', 'box-container' + i);
+        div.setAttribute('class', 'box-column');
+        container.appendChild(div);
+    
+        for(let j = 0; j < boardSize; j++) {
+    
+            const boxContainer = document.querySelector('#box-container' + i);
+            const div = document.createElement('div');
+            div.setAttribute('class', 'box');
+            boxContainer.appendChild(div);
+        }
     }
 }
-
-form();
-
-
-colorChange();
 
 // Function to add event listener upon 'mouseover' to update color
 function colorChange() {
@@ -55,7 +58,7 @@ function colorChange() {
     }
 }
 
-
+// Function to build form for updating the number of grid squares
 function form() {
     const div = document.createElement('div');
     const form = document.createElement('form');
