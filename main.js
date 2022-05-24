@@ -19,9 +19,7 @@ containerDiv.setAttribute('class', 'container');        //add container class
 
 const container = document.querySelector('.container');
 
-let boardSize = 30;
-
-// Loop through and create board
+let boardSize = 16;
 
 createBoard();
 form();
@@ -29,6 +27,7 @@ colorChange();
 
 // Function to create board with grid squares
 function createBoard() {
+
     for(let i = 0; i < boardSize; i++) {
 
         const div = document.createElement('div');
@@ -43,7 +42,7 @@ function createBoard() {
             div.setAttribute('class', 'box');
             boxContainer.appendChild(div);
         }
-    }
+    } colorChange();
 }
 
 // Function to add event listener upon 'mouseover' to update color
@@ -73,7 +72,7 @@ function form() {
 
     //const mainForm = document.querySelector('.main-form');
     formContainer.appendChild(input);
-    input.setAttribute('class', 'form-imput');
+    input.setAttribute('id', 'form-input');
     input.setAttribute('type', 'text');
     input.setAttribute('placeholder', '16');
     input.setAttribute('name', 'gridSquare');
@@ -81,5 +80,16 @@ function form() {
     // Add button element to document
     formContainer.appendChild(btn);
     btn.setAttribute('class', 'btn');
+    btn.setAttribute('type', 'submit');
     btn.innerHTML = "Update";
+    btn.addEventListener("click", function() {updateGridNumber()});
+}
+
+function updateGridNumber() {
+    let x = document.querySelector('.container');
+    x.innerHTML = '';
+    let val = document.getElementById('form-input').value;
+    boardSize = val;
+    console.log(boardSize);
+    createBoard();
 }
